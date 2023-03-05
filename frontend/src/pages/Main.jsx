@@ -4,9 +4,9 @@ import "../App.css";
 
 export default function Main() {
 	return (
-		<main>
-			<Link className="mainPageLink">Cadastre um Time</Link>
-			<Link className="mainPageLink">Times cadastrados</Link>
-		</main>
+		<nav>
+			<Link to="register" className="mainPageLink">Cadastre um Time</Link>
+			<Link to="teams" className="mainPageLink">Times cadastrados</Link>
+		</nav>
 	);
 }
