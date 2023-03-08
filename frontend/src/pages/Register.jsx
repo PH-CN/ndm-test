@@ -5,10 +5,15 @@ import "../App.css";
 const initialValues = {
 	teamName: "",
 	playerOne: "",
+	playerOneAge: 0,
 	playerTwo: "",
+	playerTwoAge: 0,
 	playerThree: "",
+	playerThreeAge: 0,
 	playerFour: "",
+	playerFourAge: 0,
 	playerFive: "",
+	playerFiveAge: 0,
 };
 
 
@@ -57,6 +62,15 @@ export default function Register() {
 						onChange={ handleInputChange }
 						name="playerOne"
 					/>
+					<label htmlFor="player1Age">Idade Jogador 1</label>
+					<input
+						className="form-control"
+						type="number"
+						id="player1Age"
+						value={ values.playerOneAge }
+						onChange={ handleInputChange }
+						name="playerOneAge"
+					/>
 				</div>
 
 				<div className="form-group">
@@ -68,6 +82,15 @@ export default function Register() {
 						value={ values.playerTwo }
 						onChange={ handleInputChange }
 						name="playerTwo"
+					/>
+					<label htmlFor="player2Age">Idade Jogador 2</label>
+					<input
+						className="form-control"
+						type="number"
+						id="player2Age"
+						value={ values.playerTwoAge }
+						onChange={ handleInputChange }
+						name="playerTwoAge"
 					/>
 				</div>
 
@@ -81,6 +104,15 @@ export default function Register() {
 						value={ values.playerThree }
 						onChange={ handleInputChange }
 					/>
+					<label htmlFor="player3Age">Idade Jogador 3</label>
+					<input
+						className="form-control"
+						type="number"
+						id="player3Age"
+						value={ values.playerThreeAge }
+						onChange={ handleInputChange }
+						name="playerThreeAge"
+					/>
 				</div>
 
 				<div className="form-group">
@@ -92,6 +124,15 @@ export default function Register() {
 						name="playerFour"
 						value={ values.playerFour }
 						onChange={ handleInputChange }
+					/>
+					<label htmlFor="player4Age">Idade Jogador 4</label>
+					<input
+						className="form-control"
+						type="number"
+						id="player4Age"
+						value={ values.playerFourAge }
+						onChange={ handleInputChange }
+						name="playerFourAge"
 					/>
 				</div>
 
@@ -105,6 +146,15 @@ export default function Register() {
 						value={ values.playerFive }
 						onChange={ handleInputChange }
 					/>
+					<label htmlFor="player5Age">Idade Jogador 5</label>
+					<input
+						className="form-control"
+						type="number"
+						id="player5Age"
+						value={ values.playerFiveAge }
+						onChange={ handleInputChange }
+						name="playerFiveAge"
+					/>
 				</div>
 
 				<button
@@ -114,7 +164,7 @@ export default function Register() {
 				>
 					Registrar
 				</button>
-					onc
+
 			</form>
 		</div>
 	);
