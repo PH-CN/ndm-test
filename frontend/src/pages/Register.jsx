@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState } from "react";
 import "../App.css";
 
@@ -13,6 +14,11 @@ const initialValues = {
 
 export default function Register() {
 	const [values, setValues] = useState(initialValues);
+
+	const registerTeam = async () => {
+		await axios.post("http://localhost:3001/register",
+			{ nome: values.teamName });
+	};
 
 	const handleInputChange = (e) => {
 		const { name, value } = e.target;
@@ -35,8 +41,8 @@ export default function Register() {
 						className="form-control"
 						type="text"
 						id="teamName"
-						value={values.teamName}
-						onChange={handleInputChange}
+						value={ values.teamName }
+						onChange={ handleInputChange }
 						name="teamName"
 					/>
 				</div>
@@ -47,8 +53,8 @@ export default function Register() {
 						className="form-control"
 						type="text"
 						id="player1"
-						value={values.playerOne}
-						onChange={handleInputChange}
+						value={ values.playerOne }
+						onChange={ handleInputChange }
 						name="playerOne"
 					/>
 				</div>
@@ -59,8 +65,8 @@ export default function Register() {
 						className="form-control"
 						type="text"
 						id="player2"
-						value={values.playerTwo}
-						onChange={handleInputChange}
+						value={ values.playerTwo }
+						onChange={ handleInputChange }
 						name="playerTwo"
 					/>
 				</div>
@@ -72,8 +78,8 @@ export default function Register() {
 						type="text"
 						id="player3"
 						name="playerThree"
-						value={values.playerThree}
-						onChange={handleInputChange}
+						value={ values.playerThree }
+						onChange={ handleInputChange }
 					/>
 				</div>
 
@@ -84,8 +90,8 @@ export default function Register() {
 						type="text"
 						id="player4"
 						name="playerFour"
-						value={values.playerFour}
-						onChange={handleInputChange}
+						value={ values.playerFour }
+						onChange={ handleInputChange }
 					/>
 				</div>
 
@@ -96,13 +102,19 @@ export default function Register() {
 						type="text"
 						id="player5"
 						name="playerFive"
-						value={values.playerFive}
-						onChange={handleInputChange}
+						value={ values.playerFive }
+						onChange={ handleInputChange }
 					/>
 				</div>
 
-				<button className="btn btn-primary w-100" type="submit">Registrar</button>
-
+				<button
+					className="btn btn-primary w-100"
+					type="submit"
+					onClick={ registerTeam }
+				>
+					Registrar
+				</button>
+					onc
 			</form>
 		</div>
 	);
