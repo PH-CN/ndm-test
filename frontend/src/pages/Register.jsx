@@ -5,24 +5,33 @@ import "../App.css";
 const initialValues = {
 	teamName: "",
 	playerOne: "",
-	playerOneAge: 0,
+	playerOneAge: "",
 	playerTwo: "",
-	playerTwoAge: 0,
+	playerTwoAge: "",
 	playerThree: "",
-	playerThreeAge: 0,
+	playerThreeAge: "",
 	playerFour: "",
-	playerFourAge: 0,
+	playerFourAge: "",
 	playerFive: "",
-	playerFiveAge: 0,
+	playerFiveAge: "",
 };
 
 
 export default function Register() {
 	const [values, setValues] = useState(initialValues);
+	const [errorMsg, setErrorMsg] = useState(null);
 
-	const registerTeam = async () => {
-		await axios.post("http://localhost:3001/register",
-			{ nome: values.teamName });
+	const registerTeamAndPlayers = async (e) => {
+		try {
+			e.preventDefault();
+			const response =	await axios.post("http://localhost:3001/register",
+				{ nome: values.teamName });
+			await axios.post("http://localhost:3001/registerplayers",
+				{ ...values, teamId: response.data.id });
+			setValues(initialValues);
+		} catch(e) {
+			setErrorMsg(e.response.data.message);
+		}
 	};
 
 	const handleInputChange = (e) => {
@@ -160,10 +169,11 @@ export default function Register() {
 				<button
 					className="btn btn-primary w-100"
 					type="submit"
-					onClick={ registerTeam }
+					onClick={ registerTeamAndPlayers }
 				>
 					Registrar
 				</button>
+				{errorMsg && <div style={ { color: "red" } } > { errorMsg } </div>}
 
 			</form>
 		</div>
