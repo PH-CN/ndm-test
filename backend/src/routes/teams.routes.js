@@ -11,7 +11,7 @@ teamsRoutes.post("/register", async function (req, res) {
 
 	const team = await prisma.team.create({
 		data: {
-			nome,
+			nome
 		}
 	});
 
