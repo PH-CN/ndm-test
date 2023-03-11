@@ -57,6 +57,7 @@ export default function Register() {
 						value={ values.teamName }
 						onChange={ handleInputChange }
 						name="teamName"
+						required
 					/>
 				</div>
 
@@ -69,6 +70,7 @@ export default function Register() {
 						value={ values.playerOne }
 						onChange={ handleInputChange }
 						name="playerOne"
+						required
 					/>
 					<label htmlFor="player1Age">Idade Jogador 1</label>
 					<input
@@ -78,6 +80,7 @@ export default function Register() {
 						value={ values.playerOneAge }
 						onChange={ handleInputChange }
 						name="playerOneAge"
+						required
 					/>
 				</div>
 
@@ -90,6 +93,7 @@ export default function Register() {
 						value={ values.playerTwo }
 						onChange={ handleInputChange }
 						name="playerTwo"
+						required
 					/>
 					<label htmlFor="player2Age">Idade Jogador 2</label>
 					<input
@@ -99,6 +103,7 @@ export default function Register() {
 						value={ values.playerTwoAge }
 						onChange={ handleInputChange }
 						name="playerTwoAge"
+						required
 					/>
 				</div>
 
@@ -111,6 +116,7 @@ export default function Register() {
 						name="playerThree"
 						value={ values.playerThree }
 						onChange={ handleInputChange }
+						required
 					/>
 					<label htmlFor="player3Age">Idade Jogador 3</label>
 					<input
@@ -120,6 +126,7 @@ export default function Register() {
 						value={ values.playerThreeAge }
 						onChange={ handleInputChange }
 						name="playerThreeAge"
+						required
 					/>
 				</div>
 
@@ -132,6 +139,7 @@ export default function Register() {
 						name="playerFour"
 						value={ values.playerFour }
 						onChange={ handleInputChange }
+						required
 					/>
 					<label htmlFor="player4Age">Idade Jogador 4</label>
 					<input
@@ -141,6 +149,7 @@ export default function Register() {
 						value={ values.playerFourAge }
 						onChange={ handleInputChange }
 						name="playerFourAge"
+						required
 					/>
 				</div>
 
@@ -153,6 +162,7 @@ export default function Register() {
 						name="playerFive"
 						value={ values.playerFive }
 						onChange={ handleInputChange }
+						required
 					/>
 					<label htmlFor="player5Age">Idade Jogador 5</label>
 					<input
@@ -162,6 +172,7 @@ export default function Register() {
 						value={ values.playerFiveAge }
 						onChange={ handleInputChange }
 						name="playerFiveAge"
+						required
 					/>
 				</div>
 
