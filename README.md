@@ -1,4 +1,4 @@
-# Trybe Futebol Clube
+# Teste NDM
 
 # Contexto
 Este projeto consiste em um site para cadastro e visualização de times de e-sports consumindo e enviando informações de um banco de dados.
