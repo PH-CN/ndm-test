@@ -24,7 +24,7 @@ body {
 .register h1 {
     font-size: 36px;
     margin-bottom: 25px;
-    margin-top: 25px;
+    margin-top: 10em;
 }
 
 .register form {
@@ -32,6 +32,7 @@ body {
 }
 
 .register form .form-group {
+    margin-top: 12px;
     margin-bottom: 12px;
 }
 
